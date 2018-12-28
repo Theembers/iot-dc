@@ -13,7 +13,7 @@
 
 ## 功能模块流程图
 
-![功能模块流程图](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20181228143242.png)
+![功能模块流程图](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20181228110801.png)
 
 ## 项目结构
 
