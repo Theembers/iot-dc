@@ -19,7 +19,7 @@ public class LogService implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         while (true) {
             StringBuilder sb = new StringBuilder("GlobalInfo.SN_CHANNEL_INFO_MAP.size(): " + GlobalInfo.SN_CHANNEL_INFO_MAP.size() + "\n");
-            if (CollectionUtils.isEmpty(GlobalInfo.SN_CHANNEL_INFO_MAP)) {
+            if (!CollectionUtils.isEmpty(GlobalInfo.SN_CHANNEL_INFO_MAP)) {
                 GlobalInfo.SN_CHANNEL_INFO_MAP.forEach((k, v) -> sb.append("sn: ").append(k).append(" , info: ").append(v).append("\n"));
             }
             LOGGER.info(sb.toString());
