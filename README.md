@@ -3,11 +3,11 @@
 > **src**: https://github.com/Theembers/iot-dc
 > **thanks for star! :)**
 
-github图片加载不完整可访问我的主页：
+**github图片加载不完整可访问我的主页：**
 
-https://theembers.github.io/2018/12/28/springboot-netty-iot/ （gitee）
+https://theembers.github.io/2018/12/28/springboot-netty-iot/ （github）
 
-https://theembers.gitee.io/2018/12/28/springboot-netty-iot/ （github）
+https://theembers.gitee.io/2018/12/28/springboot-netty-iot/ （gitee）
 
 
 - JDK 8+
