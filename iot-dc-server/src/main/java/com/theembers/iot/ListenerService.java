@@ -36,6 +36,7 @@ public class ListenerService implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        LOGGER.info("Netty Start..");
         Integer port = nettyConfig.getPort();
         if (port == null) {
             LOGGER.warn("port is empty.");
