@@ -11,8 +11,10 @@ https://theembers.gitee.io/2018/12/28/springboot-netty-iot/ （gitee）
 
 
 - JDK 8+
-- springboot 1.4.5
-- netty 4.1.29
+- ~~springboot 1.4.5~~
+- springboot 2.1.3.RELEASE
+- ~~netty 4.1.29~~
+- netty 4.1.34.Final
 
 ## 业务流程示意图
 
