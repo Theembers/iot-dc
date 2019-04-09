@@ -15,6 +15,8 @@ https://theembers.gitee.io/2018/12/28/springboot-netty-iot/ （gitee）
 - springboot 2.1.3.RELEASE
 - ~~netty 4.1.29~~
 - netty 4.1.34.Final
+- redis
+- rabbitMq
 
 ## 业务流程示意图
 
