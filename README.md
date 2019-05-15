@@ -1,6 +1,3 @@
-[![GitHub stars](https://img.shields.io/github/stars/Theembers/iot-dc.svg?color=red)](https://github.com/Theembers/iot-dc/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Theembers/iot-dc.svg)](https://github.com/Theembers/iot-dc/network)
-
 > 一个基于 springboot+netty+rabbitmq 实现的 物联网设备(IOT) 数据接入的项目
 
 > **src**: https://github.com/Theembers/iot-dc
