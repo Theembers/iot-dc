@@ -17,7 +17,7 @@ https://theembers.gitee.io/2018/12/28/springboot-netty-iot/ （gitee）
 - netty 4.1.34.Final
 - redis
 - rabbitMq
-- kafak
+- kafka
 
 
 ## 业务流程示意图
