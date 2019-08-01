@@ -1,11 +1,14 @@
 > a IOT data insert project and power by springboot+netty+rabbitmq/kafka
+>
 > 一个基于 springboot+netty+rabbitmq 实现的 物联网设备(IOT) 数据接入的项目
 
 > **src**: https://github.com/Theembers/iot-dc
+>
 > **thanks for star! :)**
 
+**if the github can't load any images, just click below link to my pages.**
 
-**github图片加载不完整可访问我的主页：(if the github can't load any images, just click below link to my pages.)**
+**github图片加载不完整可访问我的主页：**
 
 https://theembers.github.io/2018/12/28/springboot-netty-iot/ （github）
 
