@@ -1,0 +1,18 @@
+theembers:
+  iot.netty.port: 12345
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+  redis:
+    database: 10
+    host: localhost
+    port: 6379
+    timeout: 3000
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: guest
+    password: guest
+    host: localhost
+
+loggingpath: ./logs
