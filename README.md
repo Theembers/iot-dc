@@ -6,7 +6,7 @@
 >
 > **thanks for star! :)**
 
-**if the github can't load any images, just click below link to my pages.**
+**if the github can't load any images, you can click below link to my pages.**
 
 **github图片加载不完整可访问我的主页：**
 
