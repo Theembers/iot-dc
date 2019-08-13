@@ -6,7 +6,7 @@ import org.springframework.core.env.Environment;
 
 import java.io.PrintStream;
 
-import static org.springframework.boot.ansi.AnsiColor.BRIGHT_YELLOW;
+import static org.springframework.boot.ansi.AnsiColor.*;
 
 /**
  * @author TheEmbers Guo
@@ -16,7 +16,7 @@ public class TheEmbersBanner implements Banner {
     @Override
     public void printBanner(Environment environment, Class<?> sourceClass, PrintStream out) {
         for (String line : BANNER) {
-            out.println(AnsiOutput.toString(BRIGHT_YELLOW, line));
+            out.println(AnsiOutput.toString(BRIGHT_BLUE, line));
         }
 
         String version = Banner.class.getPackage().getImplementationVersion();
@@ -33,7 +33,6 @@ public class TheEmbersBanner implements Banner {
         "    | |  | '_ \\ / _ \\  __| | '_ ` _ \\| '_ \\ / _ \\ '__/ __|\n" +
         "    | |  | | | |  __/ |____| | | | | | |_) |  __/ |  \\__ \\\n" +
         "    |_|  |_| |_|\\___|______|_| |_| |_|_.__/ \\___|_|  |___/\n" +
-        "                                                          \n" +
         "                                                          \n"
     };
 }
