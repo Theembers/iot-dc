@@ -6,6 +6,11 @@
 >
 > **thanks for star! :)**
 
+
+**旧版本以封版（s-0.1）不再更新（除了bug修改），master 分支将启用新的设计，敬请期待！**
+
+
+
 **if the github can't load any images, you can click below link to my pages.**
 
 **github图片加载不完整可访问我的主页：**
