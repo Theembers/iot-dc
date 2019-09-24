@@ -8,8 +8,8 @@
 
 
 
-**<font color=red>旧版本以封版（s-0.1）不再更新（除了bug修改），master 分支将启用新的设计，敬请期待！</font>**
-**<font color=red>the obsolete version will be not update yet (except bug fix), the master will be rebuild as new one. thanks follow!</font>**
+<font color=red>旧版本以封版（s-0.1）不再更新（除了bug修改），master 分支将启用新的设计，敬请期待！</font>
+<font color=red>the obsolete version will be not update yet (except bug fix), the master will be rebuild as new one. thanks follow!</font>
 
 
 
