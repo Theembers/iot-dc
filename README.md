@@ -15,5 +15,6 @@
 
 IOT 设备总体接入架构
 
-![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926164445.jpg)
+![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926165118.jpg)
+
 
