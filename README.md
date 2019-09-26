@@ -1,8 +1,8 @@
 ## IoT-DC framework
 
-> a IOT data interface project and power by springboot+netty+rabbitmq/kafka
+> a IoT data interface project and power by springboot+netty+rabbitmq/kafka
 >
-> 一个基于 springboot+netty+rabbitmq 实现的 物联网设备(IOT) 数据接入的项目
+> 一个基于 springboot+netty+rabbitmq 实现的 物联网设备(IoT) 数据接入的项目
 
 > **src**: https://github.com/Theembers/iot-dc
 >
