@@ -13,7 +13,8 @@
 
 [branch:s-0.1](https://github.com/Theembers/iot-dc/tree/s-0.1)  
 
-IOT 设备总体接入架构
+
+IoT平台总体架构设计(IoT platform framework)
 
 ![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926165118.jpg)
 
