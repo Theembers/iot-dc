@@ -12,3 +12,8 @@
 **the obsolete version (branch:s-0.1) will be not update yet (except bug fix), the master will be rebuild as new one. thanks follow!**
 
 [branch:s-0.1](https://github.com/Theembers/iot-dc/tree/s-0.1)  
+
+IOT 设备总体接入架构
+
+![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926164445.jpg)
+
