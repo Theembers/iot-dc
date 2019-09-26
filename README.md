@@ -18,6 +18,4 @@
 
 ## IoT平台总体架构设计(IoT platform framework)
 
-![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926170712.jpg)
-
-
+![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926173357.jpg)
