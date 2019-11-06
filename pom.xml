@@ -12,6 +12,8 @@
         <module>iot-dc-beans</module>
         <module>iot-dc-boot</module>
         <module>iot-dc-server</module>
+        <module>iot-framework-dc</module>
+        <module>iot-dc-netty</module>
     </modules>
 
     <parent>
@@ -42,6 +44,11 @@
             <dependency>
                 <groupId>com.theembers.iot</groupId>
                 <artifactId>iot-dc-boot</artifactId>
+                <version>${project-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.theembers.iot</groupId>
+                <artifactId>iot-framework-dc</artifactId>
                 <version>${project-version}</version>
             </dependency>
         </dependencies>

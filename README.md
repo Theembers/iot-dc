@@ -19,3 +19,5 @@
 ## IoT platform framework (IoT平台总体架构设计)
 
 ![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926173357.jpg)
+
+## about the new IoT-DC-Framework (关于新版 IoT-DC-Framework)
