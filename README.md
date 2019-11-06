@@ -20,4 +20,8 @@
 
 ![设备总体接入架构](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20190926173357.jpg)
 
-## about the new IoT-DC-Framework (关于新版 IoT-DC-Framework)
+## about the new IoT-DC-Framework (关于新版 IoT-Framework-DC)
+
+抽离了netty的实现逻辑，保留了基础框架
+
+IoT-DC-Framework 抽象了基础的接入逻辑模型。
