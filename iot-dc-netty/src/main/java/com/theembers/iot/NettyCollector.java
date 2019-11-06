@@ -19,7 +19,7 @@ public class NettyCollector extends AbstractCollector<NettyConfig> {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        setCollectorConfig(nettyConfig);
-        setDataProcessor(processor);
+        super.setCollectorConfig(nettyConfig);
+        super.setDataProcessor(processor);
     }
 }

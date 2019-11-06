@@ -30,7 +30,6 @@ public abstract class AbstractCollector<C> implements CollectorRunner, Initializ
 
     @Override
     public void run(String... args) throws Exception {
-        DataProcessor processor = this.dataProcessor;
-        singleThreadExecutor.execute(() -> processor.executor(this.collectorConfig));
+        singleThreadExecutor.execute(() -> this.dataProcessor.executor(this.collectorConfig));
     }
 }
