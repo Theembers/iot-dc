@@ -6,7 +6,7 @@
 
 > **src**: https://github.com/Theembers/com.theembers.iot-dc
 >
-> **thanks for star! :)**
+> **thanks for star! :) ⭐⭐⭐**
 
 **the obsolete version (branch:s-0.1) will be not update yet (except bug fix), the master will be rebuild as new one. thanks follow!**
 
