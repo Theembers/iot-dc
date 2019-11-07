@@ -1,7 +1,5 @@
 package com.theembers.iot.collector;
 
-import com.theembers.iot.config.DataCollectorConfig;
-
 /**
  * 数据采集器
  *

@@ -1,6 +1,5 @@
 package com.theembers.iot.collector;
 
-import com.theembers.iot.config.DataCollectorConfig;
 import org.springframework.beans.factory.InitializingBean;
 
 import java.util.concurrent.ExecutorService;

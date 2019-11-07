@@ -1,4 +1,4 @@
-package com.theembers.iot.config;
+package com.theembers.iot.collector;
 
 /**
  * @author TheEmbers Guo

@@ -1,6 +1,7 @@
 package com.theembers.iot.config;
 
 
+import com.theembers.iot.collector.DataCollectorConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
