@@ -7,9 +7,9 @@ import java.util.List;
  * I 源数据对象实体
  * O 业务对象实体
  * <p>
- * input 方法 处理上游数据接入后的协议转换工作，默认实现是json反序列化为java对象 I
+ * inputDeserialization 方法 处理上游数据接入后的协议转换工作，默认实现是json反序列化为java对象 I
  * transform 方法 处理基于数据内容的转换、过滤、填充等工作
- * output 方法 处理下游应用数据对象的转换 默认实现是java对象 O 序列化为json
+ * outputSerialization 方法 处理下游应用数据对象的转换 默认实现是java对象 O 序列化为json
  * except 方法 进行异常处理，比如打印错误数据日志 或者 降级存储
  * execute 方法 限定了以上方法的处理流程，作为 DataProcessor 的 root 方法
  * <p>
