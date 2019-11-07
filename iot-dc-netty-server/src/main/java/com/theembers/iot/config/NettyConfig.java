@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "theembers.iot.netty")
+@ConfigurationProperties(prefix = "theembers.com.theembers.iot.netty")
 public class NettyConfig {
     private Integer port;
 

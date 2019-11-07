@@ -9,7 +9,7 @@ package com.theembers.iot.utils;
  */
 public class KeyUtils {
     public static String buildKey(String ip, Integer port) {
-        return buildKey("iot-ms:collect_model_mapping", ip, port);
+        return buildKey("com.theembers.iot-ms:collect_model_mapping", ip, port);
     }
 
     public static String buildKey(String platformName, String ip, Integer port) {

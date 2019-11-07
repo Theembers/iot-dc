@@ -7,7 +7,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 接口监听服务
+ * 抽象采集器
+ * 实现了CollectorRunner & InitializingBean接口
+ * <p>
+ * InitializingBean接口
+ * 负责加载指定的 collectorConfig配置对象 和 dataProcessor数据处理器对象
+ * <p>
+ * CollectorRunner接口
+ * CollectorRunner接口继承了 CommandLineRunner接口
+ * 模板模式 [final method] 调用处理器
  *
  * @author TheEmbers Guo
  * @version 1.0
@@ -29,7 +37,7 @@ public abstract class AbstractCollector<C> implements CollectorRunner, Initializ
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public final void run(String... args) throws Exception {
         singleThreadExecutor.execute(() -> this.dataProcessor.executor(this.collectorConfig));
     }
 }

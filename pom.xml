@@ -13,7 +13,7 @@
         <module>iot-dc-boot</module>
         <module>iot-dc-server</module>
         <module>iot-framework-dc</module>
-        <module>iot-dc-netty</module>
+        <module>iot-dc-netty-server</module>
     </modules>
 
     <parent>
@@ -49,6 +49,12 @@
             <dependency>
                 <groupId>com.theembers.iot</groupId>
                 <artifactId>iot-framework-dc</artifactId>
+                <version>${project-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.theembers.iot</groupId>
+                <artifactId>iot-dc-netty-server</artifactId>
                 <version>${project-version}</version>
             </dependency>
         </dependencies>
