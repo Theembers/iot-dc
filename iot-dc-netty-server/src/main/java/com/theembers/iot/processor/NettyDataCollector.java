@@ -3,7 +3,7 @@ package com.theembers.iot.processor;
 import com.theembers.iot.config.NettyConfig;
 import com.theembers.iot.netty.RTUPortListener;
 import com.theembers.iot.redis.IoTService;
-import com.theembers.iot.server.DataCollector;
+import com.theembers.iot.collector.DataCollector;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import org.slf4j.Logger;

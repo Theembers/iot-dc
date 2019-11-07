@@ -1,4 +1,4 @@
-package com.theembers.iot.collection;
+package com.theembers.iot.collector;
 
 import org.springframework.boot.CommandLineRunner;
 

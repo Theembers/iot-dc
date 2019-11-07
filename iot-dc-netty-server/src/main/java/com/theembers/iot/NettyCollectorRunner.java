@@ -1,8 +1,8 @@
 package com.theembers.iot;
 
-import com.theembers.iot.collection.AbstractCollectorRunner;
+import com.theembers.iot.collector.AbstractCollectorRunner;
 import com.theembers.iot.config.NettyConfig;
-import com.theembers.iot.server.DataCollector;
+import com.theembers.iot.collector.DataCollector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
