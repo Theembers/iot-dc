@@ -27,7 +27,7 @@ public interface DataProcessor<I extends Input, O extends Output> {
      * @param tData
      * @return
      */
-    List<I> input(ThingData tData);
+    List<I> inputDeserialization(ThingData tData);
 
 
     /**
@@ -43,7 +43,7 @@ public interface DataProcessor<I extends Input, O extends Output> {
      * @param out
      * @return
      */
-    AppData output(List<O> out);
+    AppData outputSerialization(List<O> out);
 
     /**
      * 异常

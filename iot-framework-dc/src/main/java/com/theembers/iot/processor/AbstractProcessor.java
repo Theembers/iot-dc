@@ -15,12 +15,12 @@ public abstract class AbstractProcessor<I extends Input, O extends Output> imple
     protected abstract Class<O> getOutputEntityClass();
 
     @Override
-    public List<I> input(ThingData tData) {
+    public List<I> inputDeserialization(ThingData tData) {
         return tData.buildDataEntity(getInputEntityClass());
     }
 
     @Override
-    public AppData output(List<O> out) {
+    public AppData outputSerialization(List<O> out) {
         AppData<O> appData = AppData.builder();
         appData.setData(out);
         return appData;
@@ -34,12 +34,12 @@ public abstract class AbstractProcessor<I extends Input, O extends Output> imple
     @Override
     public final AppData execute(ThingData tData) {
         try {
-            // 输入数据
-            List<I> in = input(tData);
+            // 输入数据反序列化
+            List<I> in = inputDeserialization(tData);
             // 数据转换
             List<O> out = transform(tData, in);
-            // 输出数据
-            return output(out);
+            // 输出数据序列化
+            return outputSerialization(out);
         } catch (Exception e) {
             except(e);
         }
