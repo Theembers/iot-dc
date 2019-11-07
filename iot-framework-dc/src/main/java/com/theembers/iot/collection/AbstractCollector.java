@@ -1,5 +1,6 @@
 package com.theembers.iot.collection;
 
+import com.theembers.iot.config.DataCollectorConfig;
 import com.theembers.iot.server.DataProcessor;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -21,19 +22,20 @@ import java.util.concurrent.Executors;
  * @version 1.0
  * createTime 2018-09-30 2:48 PM
  */
-public abstract class AbstractCollector<C> implements CollectorRunner, InitializingBean {
+public abstract class AbstractCollector<C extends DataCollectorConfig> implements CollectorRunner, InitializingBean {
     private static ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
     private C collectorConfig;
     private DataProcessor dataProcessor;
 
-    public AbstractCollector setCollectorConfig(C collectorConfig) {
-        this.collectorConfig = collectorConfig;
-        return this;
-    }
+    public abstract C setCollectorConfig();
 
-    public AbstractCollector setDataProcessor(DataProcessor dataProcessor) {
-        this.dataProcessor = dataProcessor;
-        return this;
+    public abstract DataProcessor setDataProcessor();
+
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        collectorConfig = setCollectorConfig();
+        dataProcessor = setDataProcessor();
     }
 
     @Override

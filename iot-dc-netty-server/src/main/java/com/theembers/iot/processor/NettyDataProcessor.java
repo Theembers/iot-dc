@@ -1,11 +1,11 @@
 package com.theembers.iot.processor;
 
+import com.theembers.iot.config.NettyConfig;
 import com.theembers.iot.netty.RTUPortListener;
 import com.theembers.iot.redis.IoTService;
 import com.theembers.iot.server.DataProcessor;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import com.theembers.iot.config.NettyConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

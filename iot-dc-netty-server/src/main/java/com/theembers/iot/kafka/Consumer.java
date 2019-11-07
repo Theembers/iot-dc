@@ -20,7 +20,7 @@ import org.springframework.util.StringUtils;
  * @author TheEmbers Guo
  * createTime 2019-08-01 11:06
  */
-@Component
+//@Component
 public class Consumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(Consumer.class);
 

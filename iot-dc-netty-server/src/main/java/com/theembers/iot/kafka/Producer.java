@@ -15,7 +15,7 @@ import java.util.Arrays;
  * @author TheEmbers Guo
  * createTime 2019-08-01 10:59
  */
-@Component
+//@Component
 public class Producer {
     private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
 
