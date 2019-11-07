@@ -17,5 +17,9 @@
             <groupId>com.theembers.iot</groupId>
             <artifactId>iot-framework-dc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.theembers.iot</groupId>
+            <artifactId>iot-dc-beans</artifactId>
+        </dependency>
     </dependencies>
 </project>
