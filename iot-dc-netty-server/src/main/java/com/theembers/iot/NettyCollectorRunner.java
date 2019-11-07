@@ -1,8 +1,8 @@
 package com.theembers.iot;
 
-import com.theembers.iot.collection.AbstractCollector;
+import com.theembers.iot.collection.AbstractCollectorRunner;
 import com.theembers.iot.config.NettyConfig;
-import com.theembers.iot.server.DataProcessor;
+import com.theembers.iot.server.DataCollector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,11 +14,11 @@ import org.springframework.stereotype.Component;
  * createTime 2019-11-06 14:46
  */
 @Component
-public class NettyCollector extends AbstractCollector<NettyConfig> {
+public class NettyCollectorRunner extends AbstractCollectorRunner<NettyConfig> {
     @Autowired
     private NettyConfig nettyConfig;
     @Autowired
-    private DataProcessor<NettyConfig> processor;
+    private DataCollector<NettyConfig> collector;
 
     @Override
     public NettyConfig setCollectorConfig() {
@@ -26,7 +26,9 @@ public class NettyCollector extends AbstractCollector<NettyConfig> {
     }
 
     @Override
-    public DataProcessor setDataProcessor() {
-        return processor;
+    public DataCollector setDataCollector() {
+        return collector;
     }
+
+
 }

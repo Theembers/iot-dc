@@ -3,7 +3,7 @@ package com.theembers.iot.processor;
 import com.theembers.iot.config.NettyConfig;
 import com.theembers.iot.netty.RTUPortListener;
 import com.theembers.iot.redis.IoTService;
-import com.theembers.iot.server.DataProcessor;
+import com.theembers.iot.server.DataCollector;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import org.slf4j.Logger;
@@ -18,8 +18,8 @@ import java.net.InetAddress;
  * createTime 2019-11-06 17:52
  */
 @Component
-public class NettyDataProcessor implements DataProcessor<NettyConfig> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(NettyDataProcessor.class);
+public class NettyDataCollector implements DataCollector<NettyConfig> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(NettyDataCollector.class);
     private static EventLoopGroup bossGroup = new NioEventLoopGroup();
     private static EventLoopGroup workerGroup = new NioEventLoopGroup();
 
