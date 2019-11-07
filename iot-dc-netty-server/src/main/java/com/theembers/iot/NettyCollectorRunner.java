@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * 基于 netty 实现的采集器
+ * 基于 netty 实现的采集器执行者
  * 也就是之前s-0.1这的netty实现方案
  *
  * @author TheEmbers Guo

@@ -1,9 +1,8 @@
-package com.theembers.iot.processor;
+package com.theembers.iot.collector;
 
 import com.theembers.iot.config.NettyConfig;
 import com.theembers.iot.netty.RTUPortListener;
 import com.theembers.iot.redis.IoTService;
-import com.theembers.iot.collector.DataCollector;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import org.slf4j.Logger;
@@ -14,12 +13,14 @@ import org.springframework.stereotype.Component;
 import java.net.InetAddress;
 
 /**
+ * netty实现的执行器
+ *
  * @author TheEmbers Guo
  * createTime 2019-11-06 17:52
  */
 @Component
-public class NettyDataCollector implements DataCollector<NettyConfig> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(NettyDataCollector.class);
+public class NettyCollector implements DataCollector<NettyConfig> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(NettyCollector.class);
     private static EventLoopGroup bossGroup = new NioEventLoopGroup();
     private static EventLoopGroup workerGroup = new NioEventLoopGroup();
 
