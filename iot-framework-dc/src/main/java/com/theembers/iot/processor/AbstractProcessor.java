@@ -10,13 +10,13 @@ import java.util.List;
  * createTime 2019-11-07 17:04
  */
 public abstract class AbstractProcessor<I extends Input, O extends Output> implements DataProcessor<I, O> {
-    protected abstract Class<I> getInputEntityClass();
+    protected abstract Class<I> setInputEntityClass();
 
-    protected abstract Class<O> getOutputEntityClass();
+    protected abstract Class<O> setOutputEntityClass();
 
     @Override
     public List<I> inputDeserialization(ThingData tData) {
-        return tData.buildDataEntity(getInputEntityClass());
+        return tData.buildDataEntity(setInputEntityClass());
     }
 
     @Override

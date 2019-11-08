@@ -1,6 +1,7 @@
 package com.theembers.iot.processor;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -8,6 +9,8 @@ import java.util.List;
  * createTime 2019-11-07 16:57
  */
 public class ThingData<T> implements Input<T> {
+    private String pId;
+    private Date time;
     private T data;
 
 

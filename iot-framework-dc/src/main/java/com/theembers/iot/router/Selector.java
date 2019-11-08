@@ -2,9 +2,8 @@ package com.theembers.iot.router;
 
 /**
  * @author TheEmbers Guo
- * createTime 2019-11-07 16:28
+ * createTime 2019-11-08 11:07
  */
-public interface Router {
-
+public interface Selector {
 
 }

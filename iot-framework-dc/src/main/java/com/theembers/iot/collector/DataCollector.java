@@ -7,5 +7,22 @@ package com.theembers.iot.collector;
  * createTime 2019-11-06 14:18
  */
 public interface DataCollector<C extends DataCollectorConfig> {
+    /**
+     * 初始化
+     */
+    default void init() {
+    }
+
+    /**
+     * 执行
+     *
+     * @param c
+     */
     void executor(C c);
+
+    /**
+     * 卸载
+     */
+    default void dispatch() {
+    }
 }

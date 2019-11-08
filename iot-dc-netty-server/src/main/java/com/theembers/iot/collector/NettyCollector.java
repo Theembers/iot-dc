@@ -28,6 +28,11 @@ public class NettyCollector implements DataCollector<NettyConfig> {
     private IoTService ioTService;
 
     @Override
+    public void init() {
+
+    }
+
+    @Override
     public void executor(NettyConfig nettyConfig) {
         LOGGER.info("Netty Start..");
         Integer port = nettyConfig.getPort();
@@ -42,6 +47,11 @@ public class NettyCollector implements DataCollector<NettyConfig> {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    @Override
+    public void dispatch() {
 
     }
 }

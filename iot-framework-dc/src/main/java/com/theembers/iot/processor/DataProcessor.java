@@ -7,7 +7,7 @@ import java.util.List;
  * I 源数据对象实体
  * O 业务对象实体
  * <p>
- * inputDeserialization 方法 处理上游数据接入后的协议转换工作，默认实现是json反序列化为java对象 I
+ * inputDeserialization 方法 处理 thing data 接入后的协议转换
  * transform 方法 处理基于数据内容的转换、过滤、填充等工作
  * outputSerialization 方法 处理下游应用数据对象的转换 默认实现是java对象 O 序列化为json
  * except 方法 进行异常处理，比如打印错误数据日志 或者 降级存储
@@ -28,6 +28,12 @@ public interface DataProcessor<I extends Input, O extends Output> {
      * @return
      */
     List<I> inputDeserialization(ThingData tData);
+
+
+    /**
+     * 路由转发: 基于 thingShadow 选择 handler
+     */
+    void router();
 
 
     /**
