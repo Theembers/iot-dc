@@ -1,0 +1,28 @@
+package com.theembers.iot.router;
+
+
+import com.theembers.iot.processor.DataProcessor;
+
+/**
+ * @author TheEmbers Guo
+ * createTime 2019-11-11 11:02
+ */
+public class SimpleRouteSelector implements Selector {
+    private Router router;
+
+    public SimpleRouteSelector(Router router) {
+        setRouter(router);
+    }
+
+    @Override
+    public void setRouter(Router router) {
+        this.router = router;
+    }
+
+    @Override
+    public SimpleRoute getRoute(Rule rule) {
+        String key = rule.key();
+        DataProcessor processor = (DataProcessor) router.getMap().get(key);
+        return new SimpleRoute(key, processor);
+    }
+}
