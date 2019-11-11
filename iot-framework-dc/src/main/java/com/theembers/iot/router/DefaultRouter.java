@@ -2,28 +2,27 @@ package com.theembers.iot.router;
 
 
 import com.theembers.iot.processor.DataProcessor;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.beans.Introspector;
-import java.lang.reflect.Modifier;
 import java.util.Map;
-import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * @author TheEmbers Guo
  * createTime 2019-11-11 10:58
  */
 @Component
-public class DefaultRouter extends AbstractRouter implements InitializingBean, ApplicationContextAware {
+public class DefaultRouter extends AbstractRouter implements InitializingBean {
+
+
 
     @Override
     public void scanAndBuildMap() {
-        initDataProcessor();
+        init();
     }
 
     @Override
@@ -36,30 +35,23 @@ public class DefaultRouter extends AbstractRouter implements InitializingBean, A
         return DATA_PROCESSOR_MAP;
     }
 
-    private static ApplicationContext applicationContext;
     /**
-     * Map<beanName,DataProcessor>
+     * Map<dataProcessorClassName,appTopics>
      */
-
-    private void register(String beanName, DataProcessor dataProcessor) {
-        DATA_PROCESSOR_MAP.put(beanName, dataProcessor);
-    }
-
-
+    private static final ConcurrentMap<String, String[]> APP_TOPICS_MAP = new ConcurrentHashMap<>();
 
     @Override
     public void afterPropertiesSet() {
         initRouter(new SimpleRouteSelector(this));
     }
 
+    public String[] getAppTopics(String name) {
+        return APP_TOPICS_MAP.get(name);
+    }
 
-
-    private void initDataProcessor() {
+    private void init() {
 
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        DefaultRouter.applicationContext = applicationContext;
-    }
+
 }

@@ -7,7 +7,7 @@ import com.theembers.iot.processor.DataProcessor;
  * @author TheEmbers Guo
  * createTime 2019-11-11 11:02
  */
-public class SimpleRouteSelector implements Selector {
+public class SimpleRouteSelector implements Selector<SimpleRoute> {
     private Router router;
 
     public SimpleRouteSelector(Router router) {
