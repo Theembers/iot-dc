@@ -11,10 +11,6 @@ public class TopicRule implements Rule {
         this.topic = topic;
     }
 
-    public Rule buildRule(String topic) {
-        return new TopicRule(topic);
-    }
-
     @Override
     public String key() {
         return topic;
