@@ -28,8 +28,7 @@
 ![](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191108181145.jpg)
 
 - router 模型 & device shadow 模型
-![router 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191108180557.jpg)
-
+![router 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191111131757.jpg)
 
 
 - iot-dc-netty-server 是之前的netty实现，目前（2019-11-07）只是迁移了老模块的代码，后期会修改结构，所以暂不做架构说明
