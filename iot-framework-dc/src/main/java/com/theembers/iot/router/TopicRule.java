@@ -15,7 +15,6 @@ public class TopicRule implements Rule {
         return new TopicRule(topic);
     }
 
-
     @Override
     public String key() {
         return topic;
