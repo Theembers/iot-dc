@@ -25,9 +25,11 @@
 抽离了netty的实现逻辑，保留了基础框架
 
 - iot-framework-dc 抽象了基础的接入逻辑模型。如下图：（待补全）
+
 ![](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191108181145.jpg)
 
 - router 模型 & device shadow 模型
+
   路由器 (router)，把接入的数据分发到符合规则 (rule) 的处理器 (processor) 中进行处理。
 ![router 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191111131757.jpg)
 
