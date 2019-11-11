@@ -20,7 +20,7 @@ import java.util.List;
  * @author TheEmbers Guo
  * createTime 2019-11-07 16:29
  */
-public interface DataProcessor<I extends Input, O extends Output> {
+public interface Processor<I extends Input, O extends Output> {
     /**
      * 数据接口: 接入数据并把数据转换为实体
      *

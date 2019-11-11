@@ -1,5 +1,7 @@
 package com.theembers.iot.router;
 
+import com.theembers.iot.processor.Processor;
+
 import java.util.Map;
 
 /**
@@ -30,5 +32,5 @@ public interface Router {
 
     Selector getSelector();
 
-    Map getMap();
+    Map<String, Processor> getMap();
 }

@@ -9,7 +9,7 @@ import java.util.List;
  * @author TheEmbers Guo
  * createTime 2019-11-07 17:04
  */
-public abstract class AbstractProcessor<I extends Input, O extends Output> implements DataProcessor<I, O> {
+public abstract class AbstractProcessor<I extends Input, O extends Output> implements Processor<I, O> {
     protected abstract Class<I> setInputEntityClass();
 
     protected abstract Class<O> setOutputEntityClass();

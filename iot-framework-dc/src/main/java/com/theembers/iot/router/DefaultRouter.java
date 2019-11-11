@@ -1,15 +1,11 @@
 package com.theembers.iot.router;
 
 
-import com.theembers.iot.processor.DataProcessor;
+import com.theembers.iot.processor.Processor;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.beans.Introspector;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 /**
  * @author TheEmbers Guo
@@ -17,7 +13,6 @@ import java.util.concurrent.ConcurrentMap;
  */
 @Component
 public class DefaultRouter extends AbstractRouter implements InitializingBean {
-
 
 
     @Override
@@ -31,27 +26,18 @@ public class DefaultRouter extends AbstractRouter implements InitializingBean {
     }
 
     @Override
-    public Map<String, DataProcessor> getMap() {
-        return DATA_PROCESSOR_MAP;
+    public Map<String, Processor> getMap() {
+        return PROCESSOR_MAP;
     }
 
-    /**
-     * Map<dataProcessorClassName,appTopics>
-     */
-    private static final ConcurrentMap<String, String[]> APP_TOPICS_MAP = new ConcurrentHashMap<>();
 
     @Override
     public void afterPropertiesSet() {
         initRouter(new SimpleRouteSelector(this));
     }
 
-    public String[] getAppTopics(String name) {
-        return APP_TOPICS_MAP.get(name);
-    }
-
     private void init() {
-
+        // todo  初始化方法
     }
-
 
 }

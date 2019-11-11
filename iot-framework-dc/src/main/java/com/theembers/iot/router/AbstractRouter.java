@@ -2,7 +2,7 @@ package com.theembers.iot.router;
 
 
 
-import com.theembers.iot.processor.DataProcessor;
+import com.theembers.iot.processor.Processor;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class AbstractRouter implements Router {
     private Selector selector;
-    protected static final Map<String, DataProcessor> DATA_PROCESSOR_MAP = new ConcurrentHashMap<>();
+    protected static final Map<String, Processor> PROCESSOR_MAP = new ConcurrentHashMap<>();
 
 
     @Override
@@ -38,6 +38,6 @@ public abstract class AbstractRouter implements Router {
 
     @Override
     public Map getMap() {
-        return DATA_PROCESSOR_MAP;
+        return PROCESSOR_MAP;
     }
 }
