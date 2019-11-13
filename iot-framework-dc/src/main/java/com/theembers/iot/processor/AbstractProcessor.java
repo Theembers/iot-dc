@@ -31,18 +31,18 @@ public abstract class AbstractProcessor<I extends Input, O extends Output> imple
         throw new RuntimeException(e);
     }
 
-    @Override
-    public final AppData execute(ThingData tData) {
-        try {
-            // 输入数据反序列化
-            List<I> in = inputDeserialization(tData);
-            // 数据转换
-            List<O> out = transform(tData, in);
-            // 输出数据序列化
-            return outputSerialization(out);
-        } catch (Exception e) {
-            except(e);
-        }
-        return null;
-    }
+//    @Override
+//    public final AppData execute(ThingData tData) {
+//        try {
+//            // 输入数据反序列化
+//            List<I> in = inputDeserialization(tData);
+//            // 数据转换
+//            List<O> out = transform(tData, in);
+//            // 输出数据序列化
+//            return outputSerialization(out);
+//        } catch (Exception e) {
+//            except(e);
+//        }
+//        return null;
+//    }
 }
