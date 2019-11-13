@@ -6,6 +6,6 @@ package com.theembers.iot.router;
  * @author TheEmbers Guo
  * createTime 2019-11-11 10:18
  */
-public interface Rule {
-    String key();
+public interface Rule<K> {
+    K key();
 }

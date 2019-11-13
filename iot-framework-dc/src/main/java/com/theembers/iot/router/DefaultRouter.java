@@ -21,8 +21,8 @@ public class DefaultRouter extends AbstractRouter implements InitializingBean {
     }
 
     @Override
-    public SimpleRouteSelector getSelector() {
-        return (SimpleRouteSelector) super.getSelector();
+    public DefaultSelector getSelector() {
+        return (DefaultSelector) super.getSelector();
     }
 
     @Override
@@ -33,7 +33,7 @@ public class DefaultRouter extends AbstractRouter implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() {
-        initRouter(new SimpleRouteSelector(this));
+        initRouter(new DefaultSelector(this));
     }
 
     private void init() {

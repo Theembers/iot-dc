@@ -1,5 +1,7 @@
 package com.theembers.iot.processor;
 
+import com.theembers.iot.shadow.Shadow;
+
 import java.util.List;
 
 /**
@@ -20,7 +22,7 @@ import java.util.List;
  * @author TheEmbers Guo
  * createTime 2019-11-07 16:29
  */
-public interface Processor<I extends Input, O extends Output> {
+public interface Processor<I extends Input, O extends Output> extends Slot {
     /**
      * 数据接口: 接入数据并把数据转换为实体
      *
@@ -41,7 +43,7 @@ public interface Processor<I extends Input, O extends Output> {
      *
      * @param in
      */
-    List<O> transform(ThingData tData, List<I> in);
+    List<O> transform(Input tData, List<I> in);
 
     /**
      * 数据出口: 构建为统一格式的下游数据
@@ -49,7 +51,7 @@ public interface Processor<I extends Input, O extends Output> {
      * @param out
      * @return
      */
-    AppData outputSerialization(List<O> out);
+    Output outputSerialization(List<O> out);
 
     /**
      * 异常
@@ -62,6 +64,6 @@ public interface Processor<I extends Input, O extends Output> {
      * @param tData
      * @return
      */
-    AppData execute(ThingData tData);
+    Output execute(Shadow shadow, Input tData);
 
 }

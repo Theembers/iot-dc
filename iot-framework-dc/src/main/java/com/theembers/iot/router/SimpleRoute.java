@@ -1,40 +1,35 @@
 package com.theembers.iot.router;
 
-
+import com.theembers.iot.processor.Input;
 import com.theembers.iot.processor.Processor;
+import com.theembers.iot.shadow.Shadow;
+import com.yunding.iot.exception.processor.IotDataProcessorErrorException;
+import com.yunding.iot.framework.processor.Processor;
+import com.yunding.iot.framework.shadow.Shadow;
+import com.yunding.iot.processor.DataProcessor;
+import com.yunding.iot.protocol.common.kafka.IotDataMessage;
 
 /**
- * simpleRoute 是 简单路径
- * 只返回一个 processor
- *
  * @author TheEmbers Guo
  * createTime 2019-11-11 10:47
  */
 
-public class SimpleRoute implements Route {
-    private String key;
-    private Processor processor;
+public class SimpleRoute<P> extends AbstractRoute<P, SimpleRule> {
 
-    public SimpleRoute(String key, Processor processor) {
-        this.key = key;
-        this.processor = processor;
+    public SimpleRoute(SimpleRule rule) {
+        super(rule);
     }
 
-    public String getKey() {
-        return key;
-    }
-
-    public SimpleRoute setKey(String key) {
-        this.key = key;
+    @Override
+    public Route buildRoute(Router router) {
+        this.processors = (P) router.getMap().get(this.rule.key());
         return this;
     }
 
-    public Processor getProcessor() {
-        return processor;
-    }
+    @Override
+    public void run(Shadow shadow, Input data) {
+        Processor processor = (Processor) this.processors;
+        processor.execute(shadow, data);
 
-    public SimpleRoute setProcessor(Processor processor) {
-        this.processor = processor;
-        return this;
     }
 }
