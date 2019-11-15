@@ -8,7 +8,7 @@ import java.util.List;
  * @author TheEmbers Guo
  * createTime 2019-11-07 16:57
  */
-public class ThingData<T> implements Input<T> {
+public class ThingData<T> implements Input<T>, Output<T> {
     private String pId;
     private Date time;
     private T data;
@@ -25,5 +25,10 @@ public class ThingData<T> implements Input<T> {
 
     List<T> buildDataEntity(Class<T> clazz) {
         return Collections.singletonList(data);
+    }
+
+    @Override
+    public T get() {
+        return data;
     }
 }

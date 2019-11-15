@@ -2,7 +2,10 @@ package com.theembers.iot.processor;
 
 /**
  * @author TheEmbers Guo
- * createTime 2019-11-07 16:37
+ * createTime 2019-11-14 10:01
  */
 public interface Input<T> {
+    default T get() {
+        return (T) this;
+    }
 }

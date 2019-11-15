@@ -1,4 +1,4 @@
-package com.theembers.iot.router;
+package com.theembers.iot.router.rule;
 
 /**
  * @author TheEmbers Guo

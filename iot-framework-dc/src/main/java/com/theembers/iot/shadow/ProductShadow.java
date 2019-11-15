@@ -1,7 +1,7 @@
 package com.theembers.iot.shadow;
 
 
-import com.theembers.iot.router.Rule;
+import com.theembers.iot.router.rule.Rule;
 
 /**
  * @author TheEmbers Guo

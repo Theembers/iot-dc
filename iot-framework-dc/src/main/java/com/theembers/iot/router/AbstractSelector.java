@@ -1,5 +1,8 @@
 package com.theembers.iot.router;
 
+import com.theembers.iot.router.route.Route;
+import com.theembers.iot.router.rule.Rule;
+
 /**
  * @author TheEmbers Guo
  * createTime 2019-11-13 10:44
@@ -13,7 +16,7 @@ public abstract class AbstractSelector implements Selector {
     }
 
     @Override
-    public void selectRoute( Route route) {
-        route = route.buildRoute(router);
+    public void selectRoute(Route route, Rule rule) {
+        route = route.buildRoute(router, rule);
     }
 }
