@@ -1,14 +1,9 @@
 package com.theembers.iot.router.route;
 
-import com.theembers.iot.processor.ThingData;
+import com.theembers.iot.collector.SourceData;
 import com.theembers.iot.router.Router;
 import com.theembers.iot.router.rule.Rule;
 import com.theembers.iot.shadow.Shadow;
-import com.yunding.iot.demo.IotData;
-import com.yunding.iot.exception.processor.IotDataProcessorErrorException;
-import com.yunding.iot.framework.router.Router;
-import com.yunding.iot.framework.router.rule.Rule;
-import com.yunding.iot.framework.shadow.Shadow;
 
 /**
  * 路线
@@ -25,7 +20,7 @@ public interface Route<T, R extends Rule> {
      * 执行
      *
      * @param shadow
-     * @param data
+     * @param srcData
      */
-    void run(Shadow shadow, ThingData data);
+    void run(Shadow shadow, SourceData srcData);
 }

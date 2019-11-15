@@ -5,7 +5,5 @@ package com.theembers.iot.processor;
  * createTime 2019-11-14 10:01
  */
 public interface Output<T> {
-    default T get() {
-        return (T) this;
-    }
+    T get();
 }

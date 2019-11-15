@@ -1,10 +1,10 @@
 package com.theembers.iot.router.route;
 
 
+import com.theembers.iot.collector.SourceData;
 import com.theembers.iot.processor.Output;
 import com.theembers.iot.processor.Processor;
 import com.theembers.iot.processor.SlotData;
-import com.theembers.iot.processor.ThingData;
 import com.theembers.iot.shadow.Shadow;
 
 import java.util.*;
@@ -77,27 +77,29 @@ public class Dispatcher implements Iterable<Processor> {
     /**
      * 执行
      * 如果 当前processor是头节点，调用 headIn （ 调用 beforeTransform & transForm）
-     * 否则 （中间节点 或者 尾节点） 调用 buildSlotData （构建插槽） & receive（接收）
+     * 否则 （中间节点 或者 尾节点） 调用 receive（接收）
      * 最终 如果 是尾结点 则 调用 tailOut （调用 afterTransform） 并 退出循环
+     * 到 //1 则 调用 buildSlotData （构建插槽）
      *
      * @param shadow
-     * @param data
+     * @param sourceData
      */
-    void run(Shadow shadow, ThingData data) {
-        Output output = data;
+    void run(Shadow shadow, SourceData sourceData) {
+        Output output = null;
+        SlotData slotData = null;
         Iterator<Processor> processors = this.link.iterator();
         while (processors.hasNext()) {
             Processor p = processors.next();
             if (p == getFirst()) {
-                output = p.headIn(shadow, data);
+                output = p.headIn(shadow, sourceData);
             } else {
-                SlotData slotData = p.passOn(shadow, output);
                 output = p.receive(shadow, slotData);
             }
             if (p == getLast()) {
                 output = p.tailOut(shadow, output);
                 return;
             }
+            slotData = p.passOn(shadow, output); // 1
         }
     }
 }

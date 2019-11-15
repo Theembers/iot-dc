@@ -8,5 +8,7 @@ import com.theembers.iot.router.rule.Rule;
  * createTime 2019-11-11 10:14
  */
 public interface Selector {
-    void selectRoute(Route route, Rule rule);
+    Route selectRoute(Route route, Rule rule);
+
+    Route selectRoute(Rule rule);
 }

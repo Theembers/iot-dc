@@ -13,6 +13,7 @@
 
         <module>iot-framework-dc</module>
         <module>iot-dc-netty-server</module>
+        <module>iot-example</module>
     </modules>
 
     <parent>

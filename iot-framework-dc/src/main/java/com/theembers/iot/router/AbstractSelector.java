@@ -1,5 +1,6 @@
 package com.theembers.iot.router;
 
+
 import com.theembers.iot.router.route.Route;
 import com.theembers.iot.router.rule.Rule;
 
@@ -8,7 +9,7 @@ import com.theembers.iot.router.rule.Rule;
  * createTime 2019-11-13 10:44
  */
 public abstract class AbstractSelector implements Selector {
-    private Router router;
+    protected Router router;
 
 
     protected AbstractSelector(Router router) {
@@ -16,7 +17,7 @@ public abstract class AbstractSelector implements Selector {
     }
 
     @Override
-    public void selectRoute(Route route, Rule rule) {
-        route = route.buildRoute(router, rule);
+    public Route selectRoute(Route route, Rule rule) {
+        return route.buildRoute(router, rule);
     }
 }

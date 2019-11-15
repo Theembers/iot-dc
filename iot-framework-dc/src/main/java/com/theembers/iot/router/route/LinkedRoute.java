@@ -1,11 +1,10 @@
 package com.theembers.iot.router.route;
 
+import com.theembers.iot.collector.SourceData;
 import com.theembers.iot.processor.Processor;
-import com.theembers.iot.processor.ThingData;
 import com.theembers.iot.router.Router;
 import com.theembers.iot.router.rule.LinkedRule;
 import com.theembers.iot.shadow.Shadow;
-import com.yunding.iot.demo.IotData;
 
 import java.util.Map;
 
@@ -15,7 +14,7 @@ import java.util.Map;
  */
 public class LinkedRoute extends AbstractRoute<Dispatcher, LinkedRule> {
     @Override
-    public void buildDispatcher(Router router, LinkedRule rule, Dispatcher dispatcher) {
+    public Dispatcher buildDispatcher(Router router, LinkedRule rule, Dispatcher dispatcher) {
         if (dispatcher == null) {
             dispatcher = new Dispatcher();
         }
@@ -28,11 +27,12 @@ public class LinkedRoute extends AbstractRoute<Dispatcher, LinkedRule> {
                 dispatcher.append(theProcessor);
             }
         }
+        return dispatcher;
     }
 
 
     @Override
-    public void run(Shadow shadow, ThingData data) {
+    public void run(Shadow shadow, SourceData data) {
         run(shadow, data);
     }
 }

@@ -7,9 +7,19 @@ import com.theembers.iot.router.rule.Rule;
  * @author TheEmbers Guo
  * createTime 2019-11-11 15:25
  */
-public class ProductShadow<P> implements Shadow {
+public abstract class ProductShadow<P> implements Shadow {
     private Rule rule;
     private P product;
+    private String[] topics;
+
+    public String[] getTopics() {
+        return topics;
+    }
+
+    public ProductShadow<P> setTopics(String[] topics) {
+        this.topics = topics;
+        return this;
+    }
 
     public Rule getRule() {
         return rule;
