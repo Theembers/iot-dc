@@ -33,6 +33,9 @@
   路由器 (router)，把接入的数据分发到符合规则 (rule) 的处理器 (processor) 中进行处理。
 ![router 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191111131757.jpg)
 
+- processor-link 模型
+
+![processor-link 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/processor-link.jpg)
 
 - iot-dc-netty-server 是之前的netty实现，目前（2019-11-07）只是迁移了老模块的代码，后期会修改结构，所以暂不做架构说明。新分支侧着架构设计，所以具体实现可能要延后实现。
 
