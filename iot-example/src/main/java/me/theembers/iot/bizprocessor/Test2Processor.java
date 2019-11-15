@@ -1,33 +1,31 @@
-package com.theembers.iot.demo.bizprocessor;
+package me.theembers.iot.bizprocessor;
 
-import com.yunding.common.utils.JacksonUtil;
+import com.alibaba.fastjson.JSON;
 import com.theembers.iot.collector.SourceData;
-import com.theembers.iot.demo.bean.TestAppData;
-import com.theembers.iot.demo.bean.TestIotData;
-import com.theembers.iot.demo.shadow.IotShadow;
 import com.theembers.iot.processor.AbstractProcessor;
 import com.theembers.iot.processor.Input;
 import com.theembers.iot.processor.Output;
 import com.theembers.iot.processor.SlotData;
+import me.theembers.iot.bean.TestAppData;
+import me.theembers.iot.bean.TestIotData;
+import me.theembers.iot.shadow.IotShadow;
 
 import java.util.Date;
 
 /**
  * @author TheEmbers Guo
- * createTime 2019-11-14 15:01
+ * createTime 2019-11-15 16:19
  */
-public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, TestAppData> {
-
-
+public class Test2Processor extends AbstractProcessor<IotShadow, TestIotData, TestAppData> {
     @Override
     public Input<TestIotData> beforeTransform(IotShadow shadow, SourceData srcData) throws Exception {
-        System.out.println(Thread.currentThread().getName() + " beforeTransform >> " + srcData.getData());
-        return JacksonUtil.fromString((String) srcData.getData(), TestIotData.class);
+        System.out.println(Thread.currentThread().getName() + " Test2Processor beforeTransform >> " + srcData.getData());
+        return JSON.parseObject((String) srcData.getData(), TestIotData.class);
     }
 
     @Override
     public Output<TestAppData> transform(IotShadow shadow, Input<TestIotData> input) throws Exception {
-        System.out.println(Thread.currentThread().getName() + " transform >> ...");
+        System.out.println(Thread.currentThread().getName() + " Test2Processor transform >> ...");
         TestIotData data = input.get();
         TestAppData appData = new TestAppData();
         appData.setSn(data.getSn() + "_" + new Date().getTime());
@@ -36,7 +34,7 @@ public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, Tes
 
     @Override
     public Output<TestAppData> afterTransform(IotShadow shadow, TestAppData output) throws Exception {
-        System.out.println(Thread.currentThread().getName() + " afterTransform << " + output.getSn());
+        System.out.println(Thread.currentThread().getName() + " Test2Processor afterTransform << " + output.getSn());
         return null;
     }
 
@@ -47,7 +45,7 @@ public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, Tes
 
     @Override
     public Input<TestIotData> relay(IotShadow shadow, SlotData slotData) {
-        System.out.println(Thread.currentThread().getName() + " relay >> ");
+        System.out.println(Thread.currentThread().getName() + " Test2Processor relay >> ");
         if (slotData instanceof TestAppData) {
             TestAppData testAppData = (TestAppData) slotData.get();
             TestIotData iotData = new TestIotData();
@@ -61,7 +59,7 @@ public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, Tes
 
     @Override
     public SlotData passOn(IotShadow shadow, Output<TestAppData> output) {
-        System.out.println(Thread.currentThread().getName() + " passOn <<======");
+        System.out.println(Thread.currentThread().getName() + " Test2Processor passOn <<======");
         return output.get();
     }
 }

@@ -1,4 +1,4 @@
-package com.theembers.iot.demo.bean;
+package me.theembers.iot.bean;
 
 import com.theembers.iot.processor.InputData;
 

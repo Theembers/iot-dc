@@ -1,7 +1,8 @@
-package com.theembers.iot.demo.bean;
+package me.theembers.iot.bean;
+
 
 import com.theembers.iot.collector.SourceData;
-import com.theembers.iot.demo.shadow.IotShadow;
+import me.theembers.iot.shadow.IotShadow;
 
 /**
  * @author TheEmbers Guo

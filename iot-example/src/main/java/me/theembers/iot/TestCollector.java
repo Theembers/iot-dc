@@ -1,18 +1,12 @@
-package com.theembers.iot.demo;
+package me.theembers.iot;
 
 import com.alibaba.fastjson.JSON;
-import com.theembers.iot.demo.bean.IotMsgData;
-import com.theembers.iot.demo.bean.TestIotData;
-import com.theembers.iot.demo.rule.CacheRule;
-import com.theembers.iot.demo.shadow.Device;
-import com.theembers.iot.demo.shadow.IotShadow;
 import com.theembers.iot.router.Router;
-import com.yunding.iot.demo.bean.IotMsgData;
-import com.yunding.iot.demo.bean.TestIotData;
-import com.yunding.iot.demo.rule.CacheRule;
-import com.yunding.iot.demo.shadow.Device;
-import com.yunding.iot.demo.shadow.IotShadow;
-import com.yunding.iot.framework.router.Router;
+import me.theembers.iot.bean.IotMsgData;
+import me.theembers.iot.bean.TestIotData;
+import me.theembers.iot.rule.CacheRule;
+import me.theembers.iot.shadow.Device;
+import me.theembers.iot.shadow.IotShadow;
 
 import java.util.HashMap;
 import java.util.Map;

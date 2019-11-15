@@ -1,4 +1,4 @@
-package com.theembers.iot.demo.rule;
+package me.theembers.iot.rule;
 
 import com.theembers.iot.router.rule.MultipleRule;
 

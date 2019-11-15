@@ -1,4 +1,4 @@
-package com.theembers.iot.demo.shadow;
+package me.theembers.iot.shadow;
 
 import com.theembers.iot.shadow.DeviceShadowSnapshot;
 

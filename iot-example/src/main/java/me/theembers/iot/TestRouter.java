@@ -1,10 +1,10 @@
-package com.theembers.iot.demo;
+package me.theembers.iot;
 
-import com.theembers.iot.demo.bizprocessor.Test2Processor;
-import com.theembers.iot.demo.bizprocessor.TestProcessor;
 import com.theembers.iot.processor.Processor;
 import com.theembers.iot.router.AbstractRouter;
 import com.theembers.iot.router.AutoSelector;
+import me.theembers.iot.bizprocessor.Test2Processor;
+import me.theembers.iot.bizprocessor.TestProcessor;
 
 /**
  * @author TheEmbers Guo

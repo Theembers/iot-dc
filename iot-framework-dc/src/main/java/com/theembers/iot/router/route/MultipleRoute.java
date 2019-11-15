@@ -5,11 +5,6 @@ import com.theembers.iot.processor.Processor;
 import com.theembers.iot.router.Router;
 import com.theembers.iot.router.rule.MultipleRule;
 import com.theembers.iot.shadow.Shadow;
-import com.yunding.iot.framework.collector.SourceData;
-import com.yunding.iot.framework.processor.Processor;
-import com.yunding.iot.framework.router.Router;
-import com.yunding.iot.framework.router.rule.MultipleRule;
-import com.yunding.iot.framework.shadow.Shadow;
 
 import java.util.HashMap;
 import java.util.Map;
