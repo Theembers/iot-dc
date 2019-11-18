@@ -14,7 +14,8 @@
 
 [branch:s-0.1](https://github.com/Theembers/iot-dc/tree/s-0.1)  
 
-
+🎉 new framework had be done! you can running with `iot-example`-`me.theembers.iot.TestCollector` to debug it. 
+🎉 新版本框架已基本完成！可以通过 `iot-example`-`me.theembers.iot.TestCollector` 
 
 ## IoT platform framework (IoT平台总体架构设计)
 
