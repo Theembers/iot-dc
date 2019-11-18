@@ -24,7 +24,7 @@
 
 抽离了netty的实现逻辑，保留了基础框架
 
-- iot-framework-dc 抽象了基础的接入逻辑模型。如下图：（待补全）
+- iot-framework-dc 抽象了基础的接入逻辑模型。如下图：
 
 ![iot-framework-dc 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191111134357.jpg)
 
