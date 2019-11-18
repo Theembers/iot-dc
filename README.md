@@ -35,6 +35,8 @@
 
 - processor-link 模型
 
+  router 通过选择器 (Selector) 选择出的导航 (Route) 维护了一个调度者 (Dispatcher) 调度者负责管理被使用的 processor链 以及 processor 的调用 规则:
+
 ![processor-link 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/processor-link-1.jpg)
 
 - iot-dc-netty-server 是之前的netty实现，目前（2019-11-07）只是迁移了老模块的代码，后期会修改结构，所以暂不做架构说明。新分支侧着架构设计，所以具体实现可能要延后实现。
