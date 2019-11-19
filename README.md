@@ -4,7 +4,7 @@
 >
 > 一个基于 springboot+netty+rabbitmq 实现的 物联网设备(IoT) 数据接入的项目
 
-> **src**: https://github.com/Theembers/com.theembers.iot-dc
+> **src**: https://github.com/Theembers/iot-dc
 >
 > **thanks for star! :) ⭐⭐⭐⭐⭐**
 
