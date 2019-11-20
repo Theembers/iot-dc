@@ -2,6 +2,7 @@ package com.theembers.iot.router;
 
 
 import com.theembers.iot.processor.Processor;
+import com.theembers.iot.router.selector.DefaultSelector;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 

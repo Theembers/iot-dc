@@ -2,7 +2,7 @@ package me.theembers.iot;
 
 import com.theembers.iot.processor.Processor;
 import com.theembers.iot.router.AbstractRouter;
-import com.theembers.iot.router.AutoSelector;
+import com.theembers.iot.router.selector.AutoSelector;
 import me.theembers.iot.bizprocessor.Test2Processor;
 import me.theembers.iot.bizprocessor.TestProcessor;
 
