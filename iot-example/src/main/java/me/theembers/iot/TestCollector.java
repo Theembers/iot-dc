@@ -42,7 +42,7 @@ public class TestCollector {
         // 构建 影子
         CacheRule rule = new CacheRule();
         String[] pArr = {"TestProcessor", "Test2Processor"};
-        String[] pArr2 = {"Test2Processor", "Test2Processor"};
+        String[] pArr2 = {"Test2Processor", "TestProcessor"}; // -> 这边有个单例的bug 本例中 Test2Processor 只会执行一次，因为在Dispatcher#run中是内存地址比较
         Map<String, String[]> keys = new HashMap<>();
         keys.put("t1", pArr);
         keys.put("t2", pArr2);

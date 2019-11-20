@@ -19,7 +19,7 @@ import java.util.Arrays;
  * @version 1.0
  * createTime 2018-10-22 14:37
  */
-@Component
+//@Component
 public class MQSender {
     private static final Logger LOGGER = LoggerFactory.getLogger(MQSender.class);
 

@@ -30,7 +30,7 @@ public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, Tes
         System.out.println(Thread.currentThread().getName() + " transform >> ...");
         TestIotData data = input.get();
         TestAppData appData = new TestAppData();
-        appData.setSn(data.getSn() + "_" + new Date().getTime());
+        appData.setSn(data.getSn() + "_1_" + new Date().getTime());
         return appData;
     }
 

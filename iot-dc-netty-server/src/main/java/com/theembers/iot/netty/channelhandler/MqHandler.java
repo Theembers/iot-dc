@@ -19,7 +19,7 @@ import javax.annotation.PostConstruct;
  * @version 1.0
  * createTime 2018-10-19 16:37
  */
-@Component
+//@Component
 public class MqHandler extends ChannelInboundHandlerAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(MqHandler.class);
 

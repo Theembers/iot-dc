@@ -22,7 +22,7 @@ import java.io.IOException;
  * @version 1.0
  * createTime 2018-11-09 11:09
  */
-@Component
+//@Component
 public class MqListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(MqListener.class);
 

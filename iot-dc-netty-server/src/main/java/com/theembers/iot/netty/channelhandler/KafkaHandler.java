@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct;
  * @author TheEmbers Guo
  * createTime 2019-08-01 11:17
  */
-@Component
+//@Component
 public class KafkaHandler extends ChannelInboundHandlerAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MqHandler.class);
