@@ -33,6 +33,7 @@ the obsolete version (branch:s-0.1) will be not update yet (except bug fix), the
 - router 模型 & device shadow 模型
 
   路由器 (router)，把接入的数据分发到符合规则 (rule) 的处理器 (processor) 中进行处理。
+
 ![router 模型](https://image-1257148187.cos.ap-chengdu.myqcloud.com/picgo_img/20191111131757.jpg)
 
 - processor-link 模型
